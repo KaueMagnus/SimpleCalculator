@@ -4,13 +4,13 @@ fun main() {
         println("Welcome to the Simple Calculator!")
 
         print("Enter the first number: ")
-        var firstNumber = readln().toDouble()
+        var firstNumber = readln().toDoubleOrNull()
 
         print("Enter the second number: ")
-        var secondNumber = readln().toDouble()
+        var secondNumber = readln().toDoubleOrNull()
 
         if (firstNumber == null || secondNumber == null) {
-            println("Entrada inválida!")
+            println("Invalid Input! Please enter a valid number")
             return
         }
 
