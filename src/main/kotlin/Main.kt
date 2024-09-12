@@ -1,16 +1,16 @@
 fun main() {
 
     do {
-        println("Welcome to the Simple Calculator!")
+        println("\nWelcome to the Simple Calculator!")
 
         print("Enter the first number: ")
-        var firstNumber = readln().toDoubleOrNull()
+        val firstNumber = readln().toDoubleOrNull()
 
         print("Enter the second number: ")
-        var secondNumber = readln().toDoubleOrNull()
+        val secondNumber = readln().toDoubleOrNull()
 
         if (firstNumber == null || secondNumber == null) {
-            println("Invalid Input! Please enter a valid number")
+            println("\nInvalid Input! Please enter a valid number")
             return
         }
 
@@ -21,28 +21,28 @@ fun main() {
         println("4. Division")
         println("5. Remainder of the division")
         print("Enter the operation: ")
-        var operation = readln()
+        val operation = readln()
 
         var result = when (operation) {
              "1" -> firstNumber + secondNumber
              "2" -> firstNumber - secondNumber
              "3" -> firstNumber * secondNumber
              "4" -> if (secondNumber != 0.0) firstNumber / secondNumber else {
-                 println("Error: Impossible to divide with zero!")
+                 println("\nError: Impossible to divide with zero!")
                  return
              }
              "5" -> firstNumber % secondNumber
              else -> {
-                println("Invalid operation!")
+                println("\nInvalid operation!")
                  return
             }
         }
 
-        println("The operation result is: $result")
+        println("\nThe operation result is: $result")
 
-        println("Do you want to restart the calculator? (y/n)")
-        var restart = readln().lowercase()
-    } while (restart.contentEquals("y"))
+        println("\nDo you want to restart the calculator? (y/n)")
+        val restart = readln().lowercase()
+    } while (restart == "y")
 
-    print("Exiting the calculator...")
+    print("\nExiting the calculator...")
 }
